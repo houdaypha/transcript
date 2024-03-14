@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"  /> 
+    <title>Video Annotation</title>
+    <script>
+        // Alternative approach (targeting specific form elements)
+        var commentInput = document.getElementById("commentInput");
+        commentInput.addEventListener("keypress", function(event) {
+            if (event.keyCode === 13) {
+            this.form.submit();
+            }
+        });
+    </script>
+</head>
+<body>
+    
+    <div class="flex-container ">
+        <h1>Video {{index}}</h1>
+        <span>{{video_name}}</span>
+        <video width="640" height="360" controls autoplay>
+            <source src="{{ url_for('serve_video', video_path=video) }}"  type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <form method="POST" action="/">
+            <label for="suggested_transcript">Suggested Transcript:</label>
+            <textarea id="suggested_transcript" name="suggested_transcript" readonly>{{suggested_transcript}}</textarea>
+
+            <!-- Correct Transcript (editable) -->
+            <label for="correct_transcript">Correct Transcript:</label>
+            <textarea id="correct_transcript" name="correct_transcript">{{correct_transcript}}</textarea>
+
+            <!-- Comments (editable) -->
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments">{{comment}}</textarea>
+            <br>
+            <div class="button-container">
+                <input name="navigation" class="btn red-btn" type="submit" value="Previous" class="btn">
+                <input name="navigation" class="btn blue-btn" type="submit" value="Next" class="btn">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

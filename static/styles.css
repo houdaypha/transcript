@@ -1,0 +1,107 @@
+/* .radio-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+} */
+
+.radio-container {
+    display: inline-flex; /* Change display to inline-flex */
+    align-items: center;
+    margin-right: 20px; /* Add right margin for spacing */
+    margin-bottom: 20px;
+}
+
+.radio-container input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 30px; /* Increased width */
+    height: 30px; /* Increased height */
+    margin-right: 10px; /* Increased margin for spacing */
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+.radio-container input[type="radio"]:checked {
+    background-color: #0e3e65;
+    border-color: #0e3e65;
+}
+
+.radio-container label {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Other styles */
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 2px;
+}
+/* Sumbit button style */
+.btn {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100px;
+}
+
+.blue-btn {
+    background-color: #1976D2;
+    color: #fff;
+}
+
+.blue-btn:hover {
+    background-color: #124c87;
+}
+
+.red-btn {
+    background-color: #c16c6c;
+    color: #fff;
+}
+
+.red-btn:hover {
+    background-color: #783838;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px; /* Adjust the width as needed */
+}
+video {
+    /* width: 400px; Adjust the width as needed */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+textarea {
+    width: 100%;
+    resize: vertical;
+    margin-bottom: 10px;
+    text-align: right;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
